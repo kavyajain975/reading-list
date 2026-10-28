@@ -24,8 +24,12 @@
 @endif
 
     @if ($books->isEmpty())
-        <p>No books added yet.</p>
+    @if ($status)
+        <p>No books found with this reading status.</p>
     @else
+        <p>No books added yet.</p>
+    @endif
+@else
         @foreach ($books as $book)
             <div>
                 <h3>{{ $book->title }}</h3>
