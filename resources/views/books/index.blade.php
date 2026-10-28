@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Reading List</title>
+    <p>Filter by status:</p>
+
+<a href="{{ route('books.index') }}">All Books</a> |
+
+<a href="{{ route('books.index', ['status' => 'to-read']) }}">To Read</a> |
+
+<a href="{{ route('books.index', ['status' => 'reading']) }}">Reading</a> |
+
+<a href="{{ route('books.index', ['status' => 'finished']) }}">Finished</a>
+
+<hr>
 </head>
 <body>
     <h1>My Reading List</h1>
